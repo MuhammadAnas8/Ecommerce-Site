@@ -1,0 +1,47 @@
+.hero {
+    width: 95%; 
+    margin: 20px auto; 
+    position: relative;
+  }
+  
+  .slider {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: none;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .banner-image {
+    width: 100%;
+    border-radius: 10px; 
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: black;
+  }
+  
