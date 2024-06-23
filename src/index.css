@@ -21,19 +21,22 @@ a {
 
 }
 
-
-
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background-color:var(--accent-color);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
+
+button:hover {
+  background-color: var(--accent-light-color);
+  color: var(--primary-color) ;
+}
+
+
 
 button:focus,
 button:focus-visible {
