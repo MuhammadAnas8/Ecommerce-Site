@@ -1,0 +1,13 @@
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+.show-more-button {
+    border: none;
+    padding: 10px 30px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+  }

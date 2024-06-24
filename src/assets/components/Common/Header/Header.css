@@ -1,0 +1,15 @@
+.header{
+    width: 95%;
+    margin:auto;
+}
+.heading{
+border-left: 14px solid var(--accent-color);
+padding: 4px;
+font-size:20px;
+}
+.sub-heading{
+    margin-left: 40px;
+    font-size: 25px;
+    margin-top: -10px;
+    color: var(--primary-color);
+}

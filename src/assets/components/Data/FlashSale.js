@@ -1,4 +1,3 @@
-// Flash Sale Products
 export const FlashSaleProducts = [
     {
       id: 1,
