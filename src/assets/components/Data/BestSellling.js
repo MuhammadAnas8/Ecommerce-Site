@@ -1,3 +1,4 @@
+//Products details for Best Selling
 export const BestSellingProducts = [
     {
       id: 1,
