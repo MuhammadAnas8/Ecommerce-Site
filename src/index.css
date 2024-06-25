@@ -9,6 +9,10 @@
   line-height: 1.5;
   font-weight: 400;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -35,12 +39,16 @@ button:hover {
   background-color: var(--accent-light-color);
   color: var(--primary-color) ;
 }
+.container{
+  width: 95%;
+  margin:auto;
+}
 
 
-
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
+
 
 

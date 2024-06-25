@@ -6,6 +6,7 @@ import './App.css'
 import ProductList from './assets/components/Common/ProductList/ProductList'
 import { FlashSaleProducts } from './assets/components/Data/FlashSale'
 import { BestSellingProducts } from './assets/components/Data/BestSellling'
+import NewArrivals from './assets/components/NewArrivals/NewArrivals'
 function App() {
   return (
     <>
@@ -15,7 +16,8 @@ function App() {
       <ProductList products={FlashSaleProducts} />
       <Header heading="THIS MONTH's" subHeading="BEST SELLING PRODUCTS"/>
       <ProductList products={BestSellingProducts} />
-      
+      <Header heading="FEATURE" subHeading={"NEW ARRIVALS"} />
+      <NewArrivals />
     </>
   )
 }
