@@ -24,6 +24,7 @@ function ProductCard({ image, title, price, rating }) {
         <img src={image} alt={title} />
       </div>
       <div className="product-details">
+        <h5 className='tilte'>{title}</h5>
         {quantity === 0 ? (
           <button className='btn' onClick={handleAddToCart}>Add to Cart</button>
         ) :

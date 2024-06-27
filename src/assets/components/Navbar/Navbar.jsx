@@ -28,8 +28,8 @@ function Navbar() {
           </li>
         </ul>
         
-      <div class="search-container">
-       <input type="text" class="search-input" placeholder="Search..." />
+      <div className="search-container">
+       <input type="text" className="search-input" placeholder="Search..." />
         <Search  className='search-icon' />
     </div>
 
