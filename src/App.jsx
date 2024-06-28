@@ -8,6 +8,7 @@ import { FlashSaleProducts } from './assets/components/Data/FlashSale'
 import { BestSellingProducts } from './assets/components/Data/BestSellling'
 import NewArrivals from './assets/components/NewArrivals/NewArrivals'
 import BrowseCategories from './assets/components/BrowseCategories/BrowseCategories'
+import Footer from './assets/components/Footer/Footer'
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
       <NewArrivals />
       <Header heading="WANT MORE?" subHeading="BROWSE CATEGORIES" />
       <BrowseCategories />
+      <Footer />
     </>
   )
 }

@@ -1,0 +1,100 @@
+.footer {
+    margin-top: 20px !important;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    background-color: rgb(37, 37, 37); 
+    color: white; 
+    padding: 20px 0; 
+    flex-wrap: nowrap; 
+    overflow: hidden;
+    height: 320px;
+  }
+  
+  .footer .subscribe {
+    height: 250px;
+    flex: 0 0 30%;
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:space-between;
+}
+.subscribe h4 {
+  margin: 0 0 10px; 
+}
+.subscribe input{
+  padding: 10px; 
+  margin-right: 10px; 
+  border: none; 
+  border-radius: 5px;
+  width: 70%;
+}
+   input:focus, textarea:focus{
+    outline: none;
+  }
+  
+  .subscribe button {
+    padding: 10px 20px;     
+  }
+  .subscribe p>a{
+    color: white;
+    text-decoration:underline;
+
+  }
+  .footer .store {
+    flex: 0 0 10%; 
+    margin-bottom: 15px;
+  }
+  .footer strong {
+    color: rgb(222, 222, 222);
+    font-size: 18px;
+  }
+  .store ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    cursor: pointer;
+    padding: 0;
+  }
+ 
+
+  .footer .contact {
+    flex: 0 0 15%;
+    margin-right: 10px ;
+  }
+
+  .social-icons{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+  }
+  .social-icons i:hover{
+    color: #3e92f9;
+  }
+  .social-icons  i:last-of-type:hover{
+    color: #E1306C;
+  }
+ 
+  .footer .message-container {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 7px;
+    margin:4% 0 20px 10px;
+    width: 100%;
+  } 
+   
+  
+  .footer .message-container input[type="email"], .footer .message-container textarea {
+    width: 80%;
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: none; 
+    border-radius: 5px; 
+  }
+  textarea{
+  resize: none;
+  height: 70%;
+  }

@@ -1,7 +1,6 @@
 .product-card {
     border: 1px solid #ddd;
     border-radius: 10px;
-    /* overflow: hidden; */
     width: 230px;
     height: max-content;
     margin: 20px;
@@ -35,13 +34,6 @@
     font-size: 1.2em;
     font-weight: bold;
   }
- 
-  
-  .quantity-control {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-  }
   
   .quantity-control button {
     width: 25px;
@@ -52,11 +44,7 @@
     margin: 0 10px;
     font-size: 1.2em;
   }
-  
-  .product-price-rating {
-   
-  }
-  
+    
   .price {
     font-size: 1.2em;
     font-weight: bold;
