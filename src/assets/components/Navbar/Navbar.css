@@ -33,7 +33,7 @@ ul a{
     color: #ffffff;
     transition: border-bottom 0.3s, color 0.3s;
 }
-ul a:hover{
+nav ul a:hover,nav ul a.active{
     color: var(--accent-light-color);
     border-bottom: 3px solid var(--accent-light-color);
     padding-bottom: 3px;

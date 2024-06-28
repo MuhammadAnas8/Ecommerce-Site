@@ -53,12 +53,19 @@
   .store ul{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items:start;
     gap: 10px;
     list-style: none;
     cursor: pointer;
     padding: 0;
   }
- 
+ .store ul .link{
+  margin: 0;
+ }
+ .store ul .link:hover{
+  text-decoration: underline;
+ }
 
   .footer .contact {
     flex: 0 0 15%;

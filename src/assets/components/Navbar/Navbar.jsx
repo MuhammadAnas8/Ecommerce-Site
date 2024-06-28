@@ -3,6 +3,7 @@ import AccountCircleRounded from '@mui/icons-material/AccountCircleRounded';
 import Cart from '@mui/icons-material/ShoppingCartOutlined';
 import Search from '@mui/icons-material/SearchOutlined';
 import './Navbar.css'
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -11,21 +12,43 @@ function Navbar() {
           <h3>GadgetMela</h3>
           </span>
         <ul>
-          <li>
-            <a href="#Home">Home</a>
-          </li>
-          <li>
-            <a href="#Headphones">Headphones</a>
-          </li>
-          <li>
-            <a href="#Watches">Watches</a>
-          </li>
-          <li>
-            <a href="#Speaker">Speaker</a>
-          </li>
-          <li>
-            <a href="#Phones">Phones</a>
-          </li>
+        <li>
+          <NavLink 
+            to="/" 
+            end 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/phones" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Phones
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/watches" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Watches
+          </NavLink>
+          <NavLink 
+            to="/laptops" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Laptops
+          </NavLink>
+          <NavLink 
+            to="/headphones" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Headphones
+          </NavLink>
+        </li>
         </ul>
         
       <div className="search-container">

@@ -1,6 +1,6 @@
 import React from 'react'
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import './Footer.css'
+import { NavLink,Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className='footer'>
@@ -13,11 +13,11 @@ function Footer() {
       <div className="store">
         <strong>Store</strong>
         <ul>
-            <li>Home</li>
-            <li>Headphones</li>
-            <li>Watches</li>
-            <li>Laptops</li>
-            <li>Phones</li>
+          <NavLink className='link' to={"/"}>Home</NavLink>
+          <NavLink className='link' to={"/headphones"} >Headphones</NavLink>
+          <NavLink className='link' to={"/watches"}>Watches</NavLink>
+          <NavLink className='link' to={"/laptops"}>Laptops</NavLink>
+          <NavLink className='link' to={"/phones"}>Phones</NavLink>
         </ul>
       </div>
       <div className="contact">

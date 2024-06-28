@@ -1,9 +1,12 @@
 .product-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 20px;
     padding: 10px;
 }
+
 .show-more-button {
     border: none;
     padding: 10px 30px;
