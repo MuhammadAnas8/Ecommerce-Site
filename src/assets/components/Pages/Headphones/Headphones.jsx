@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../../Common/Header/Header'
 import ProductList from '../../Common/ProductList/ProductList'
-import { BestSellingProducts } from '../../Data/BestSellling'
 import { HeadphonesProducts,HeadphonesProductsNewArrival } from '../../Data/HeadphonesProducts'
 import PageHeader from '../Common/PageHeader/PageHeader'
 
