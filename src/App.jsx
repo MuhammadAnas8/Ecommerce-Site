@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom'
 
 import Navbar from './assets/components/Navbar/Navbar'
 import './App.css'
@@ -8,12 +8,15 @@ import Watches from './assets/components/Pages/Watches/Watches'
 import Home from './assets/components/Home/Home'
 import Laptops from './assets/components/Pages/Laptops/Laptops'
 import  Headphones  from './assets/components/Pages/Headphones/Headphones'
+import CartPage from './assets/components/Pages/CartPage/CartPage'
 function App() {
+  const location = useLocation();
+  const showNavbar = location.pathname !== '/cart';
   return (
     <>
-    <Router>
+
       <div>
-        <Navbar />
+        {showNavbar && <Navbar />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -21,10 +24,11 @@ function App() {
           <Route path="/watches" element={<Watches />} />
           <Route path="/headphones" element={<Headphones />} />
           <Route path="/laptops" element={<Laptops />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
         <Footer />
       </div>
-    </Router>
+   
 
     </>
   )

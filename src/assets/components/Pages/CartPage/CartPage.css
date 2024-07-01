@@ -1,0 +1,130 @@
+.cart-page{
+    padding: 25px 15px;
+}
+.cart-link strong{
+    color:var(--accent-color);
+}
+.cart-link i{
+    margin-right: 7px;
+    color: black;
+}
+.cart-link strong:hover{
+    border-bottom: 2px solid;
+    padding-bottom: 3px;
+}
+
+.cart-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 550px;
+    overflow: hidden;
+}
+.cart-items{
+    flex: 1;
+}
+.cart-items > h3{
+    color: var(--primary-color);
+    font-size: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(103, 103, 103);
+}
+
+.cart-items-list::-webkit-scrollbar {
+    width: 8px; 
+  }
+
+.cart-items-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  .cart-items-list::-webkit-scrollbar-thumb {
+    background: #848484; 
+    border-radius: 10px; 
+  }
+  
+  .cart-items-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.cart-items-list{
+    height: 100%;
+    overflow-y:scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+.card-details{
+    width: 35%;
+    background-color:var(--primary-color);
+    height: 90%;
+    border-radius: 20px;
+    align-self:flex-end;
+    padding:10px ;
+    color: white;
+
+}
+.cart-page form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    width: 85%;
+    margin: 30px auto;
+    border-bottom: 2px solid rgb(253, 253, 253);
+}
+.cart-page form label{
+    width: 100%;
+    color:#e4e4e4;
+    font-size: 15px;
+    font-weight: 500;
+}
+.cart-page form label input{
+    width: 100%;
+    height: 23px;
+    border-radius: 5px;
+    padding: 5px;
+    border:1px solid rgb(255, 255, 255);
+    background-color:transparent;
+    font-size: 15px;
+    color: white;
+}
+
+.cvv-expiry-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .cvv-expiry-container .cvv,
+  .cvv-expiry-container .expiry {
+    width: 46%;
+  }
+  
+  .cvv-expiry-container .cvv input,
+  .cvv-expiry-container .expiry input {
+    width: 100%;
+  }
+  .bill{
+    padding: 5px 15px;
+    display: flex;
+    justify-content:space-between;
+    font-weight: 700;
+  }
+
+  .payment-imgs{
+    margin-block: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 5px;
+  }
+  .payment-imgs img{
+    width: 50px;
+    height: 50px;
+    
+  }

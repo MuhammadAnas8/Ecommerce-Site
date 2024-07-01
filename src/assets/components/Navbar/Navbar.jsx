@@ -57,7 +57,9 @@ function Navbar() {
     </div>
 
         <div className="icons">
+        <NavLink to="/cart" className="cart-btn">
          <Cart className='icon' sx={{ fontSize: 32 }}/>
+        </NavLink>
          <AccountCircleRounded className='icon' sx={{ fontSize: 32 }} />
         </div>
       </nav>
