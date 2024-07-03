@@ -4,6 +4,7 @@ import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
 import WatchOutlinedIcon from '@mui/icons-material/WatchOutlined'; // Replace with correct import
 import LaptopMacOutlinedIcon from '@mui/icons-material/LaptopMacOutlined';
 import PhoneIphoneOutlinedIcon from '@mui/icons-material/PhoneIphoneOutlined';
+import { Link } from 'react-router-dom';
 function BrowseCategories() {
     const iconMap = {
         HeadphonesOutlinedIcon: HeadphonesOutlinedIcon,
@@ -39,12 +40,13 @@ function BrowseCategories() {
             {categories.map((category) => {
                 const IconComponent = iconMap[category.image];
             return(
-
                 <div className="category" key={category.id}>
+                    <Link to={"/"+category.name.toLowerCase()}>
                     <div className="category-content">
-                    <IconComponent className="category-icon" style={{ fontSize: 80 }} />
+                    <IconComponent className="category-icon" />
                     <h3>{category.name}</h3>
                     </div>
+                    </Link>
                 </div>
             )
     })}
