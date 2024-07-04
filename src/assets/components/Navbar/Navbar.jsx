@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AccountCircleRounded from '@mui/icons-material/AccountCircleRounded';
 import Cart from '@mui/icons-material/ShoppingCartOutlined';
 import Search from '@mui/icons-material/SearchOutlined';
 import './Navbar.css'
 import { NavLink } from 'react-router-dom';
+import Login from '../Login/Login';
 
 function Navbar() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
   return (
       <nav>
         <span className="brand">
@@ -60,8 +66,9 @@ function Navbar() {
         <NavLink to="/cart" className="cart-btn">
          <Cart className='icon' sx={{ fontSize: 32 }}/>
         </NavLink>
-         <AccountCircleRounded className='icon' sx={{ fontSize: 32 }} />
+         <AccountCircleRounded onClick={handleShow} className='icon' sx={{ fontSize: 32 }} />
         </div>
+        <Login show={showModal} handleClose={handleClose} />
       </nav>
   )
 }
