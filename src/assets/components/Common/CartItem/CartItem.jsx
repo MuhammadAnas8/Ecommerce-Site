@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './CartItem.css'
-function CartItem({ CartProducts }) {
+function CartItem({ CartProducts, onTotalChange }) {
     const [quantities, setQuantities] = useState(
         CartProducts.reduce((acc, item) => {
           acc[item.id] = 1;
@@ -9,18 +9,32 @@ function CartItem({ CartProducts }) {
       );
     
       const handleIncrease = (id) => {
-        setQuantities((prevQuantities) => ({
-          ...prevQuantities,
-          [id]: prevQuantities[id] + 1,
-        }));
+        setQuantities((prevQuantities) => {
+         const newQty={ ...prevQuantities, [id]: prevQuantities[id] + 1}
+          updateTotal(newQty)
+          return newQty
+        });
       };
     
       const handleDecrease = (id) => {
-        setQuantities((prevQuantities) => ({
-          ...prevQuantities,
-          [id]: prevQuantities[id] > 0 ? prevQuantities[id] - 1 : 0,
-        }));
+        setQuantities((prevQuantities) => {
+         const newQty = {...prevQuantities, [id]: prevQuantities[id] > 0 ? prevQuantities[id] - 1 : 0}
+         updateTotal(newQty)
+          return newQty
+        });
       };
+
+      const updateTotal = (newQuantities) => {
+        let total = CartProducts.reduce((acc, item) => {
+          acc += item.price * newQuantities[item.id];
+          return acc;
+        }, 0);
+        onTotalChange(total);
+      };
+    
+      useEffect(() => {
+        updateTotal(quantities);
+      }, [quantities]);
 
   return (
     <div >
@@ -39,7 +53,7 @@ function CartItem({ CartProducts }) {
               +
             </button>
           </div>
-          <h3>${item.price}</h3>
+          <h3>${(item.price * quantities[item.id]).toFixed(2)}</h3>
         </div>
       ))}
     </div>

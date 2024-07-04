@@ -4,34 +4,23 @@ import { Link } from 'react-router-dom'
 import { CartProducts } from '../../Data/CartProducts'
 import CartItem from '../../Common/CartItem/CartItem';
 
-
+const shipping = 25.49;
 
 
 function CartPage() {
+  const [total, setTotal] = useState(0);
 
-
-  const [quantity, setQuantity] = useState(1);
- 
-  const handleIncrease = () => {
-    setQuantity(prevQuantity => prevQuantity + 1);
+  const handleTotalChange = (newTotal) => {
+    setTotal(newTotal);
   };
-  
-  const handleDecrease = () => {
-    if (quantity > 0) {
-      setQuantity(prevQuantity => prevQuantity - 1);
-    }
-  };
-
-
-
   return (
     <div className='cart-page'>
-         <Link className='cart-link' to="/home"><i class="fas fa-angle-left"></i><strong>Continue Shopping</strong></Link>
+         <Link className='cart-link' to="/home"><i className="fas fa-angle-left"></i><strong>Continue Shopping</strong></Link>
          <div className="cart-container">
           <div className="cart-items">
          <h3> Shopping Cart</h3>
          <div className="cart-items-list">
-         <CartItem CartProducts={CartProducts} />
+         <CartItem CartProducts={CartProducts} onTotalChange={handleTotalChange} />
          </div>
           </div>
 
@@ -62,15 +51,15 @@ function CartPage() {
           </form>
     <div className="bill">
       <span>Subtotal</span>
-      <span>$2400.00</span>
+      <span>${total.toFixed(2)}</span>
     </div>
     <div className="bill">
     <span>Shipping</span>
-    <span>$24.00</span>
+    <span>{total && "$" + shipping}</span>
     </div>
     <div className="bill">
     <span>Total(tax incl.)</span>
-    <span>$2424.00</span>
+    <span>{ total && `$${(total + shipping).toFixed(2)}`}</span>
     </div>
 
         </div>
