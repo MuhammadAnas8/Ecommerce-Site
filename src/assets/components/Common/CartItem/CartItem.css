@@ -2,7 +2,7 @@
 .cart-item{
     background-color: #e4e4e4;
     width: 95%;
-    height: 75px;
+    height: 65px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -12,8 +12,8 @@
 
 }
 .cart-item img{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 .cart-item-detail{

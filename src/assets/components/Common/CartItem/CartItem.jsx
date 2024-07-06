@@ -3,38 +3,34 @@ import './CartItem.css'
 function CartItem({ CartProducts, onTotalChange }) {
     const [quantities, setQuantities] = useState(
         CartProducts.reduce((acc, item) => {
-          acc[item.id] = 1;
+          acc[item.id] = 0;
           return acc;
         }, {})
       );
     
       const handleIncrease = (id) => {
         setQuantities((prevQuantities) => {
-         const newQty={ ...prevQuantities, [id]: prevQuantities[id] + 1}
-          updateTotal(newQty)
-          return newQty
+          return { ...prevQuantities, [id]: prevQuantities[id] + 1 };
         });
       };
     
       const handleDecrease = (id) => {
         setQuantities((prevQuantities) => {
-         const newQty = {...prevQuantities, [id]: prevQuantities[id] > 0 ? prevQuantities[id] - 1 : 0}
-         updateTotal(newQty)
-          return newQty
+          return { ...prevQuantities, [id]: prevQuantities[id] > 0 ? prevQuantities[id] - 1 : 0 };
         });
-      };
-
-      const updateTotal = (newQuantities) => {
-        let total = CartProducts.reduce((acc, item) => {
-          acc += item.price * newQuantities[item.id];
-          return acc;
-        }, 0);
-        onTotalChange(total);
       };
     
       useEffect(() => {
+        const updateTotal = (newQuantities) => {
+          let total = CartProducts.reduce((acc, item) => {
+            acc += item.price * newQuantities[item.id];
+            return acc;
+          }, 0);
+          onTotalChange(total);
+        };
+    
         updateTotal(quantities);
-      }, [quantities]);
+      }, [quantities, CartProducts, onTotalChange]);
 
   return (
     <div >
