@@ -9,14 +9,15 @@ import Home from './assets/components/Home/Home'
 import Laptops from './assets/components/Pages/Laptops/Laptops'
 import  Headphones  from './assets/components/Pages/Headphones/Headphones'
 import CartPage from './assets/components/Pages/CartPage/CartPage'
+import Account from './assets/components/Pages/Account/Account'
 function App() {
   const location = useLocation();
-  const showNavbar = location.pathname !== '/cart';
+  const showNavbar = location.pathname === '/cart' ||  location.pathname === '/account';
   return (
     <>
 
       <div>
-        {showNavbar && <Navbar />}
+        {!showNavbar && <Navbar />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -25,6 +26,7 @@ function App() {
           <Route path="/headphones" element={<Headphones />} />
           <Route path="/laptops" element={<Laptops />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/account" element={<Account />} />
         </Routes>
         <Footer />
       </div>

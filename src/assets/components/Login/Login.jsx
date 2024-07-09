@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css';
+import { NavLink } from 'react-router-dom';
 
  function Login({ show, handleClose }){
   if (!show) return null;
@@ -18,7 +19,9 @@ import './Login.css';
               <input type="password" className="form-control" placeholder="Password" />
             <button type="submit" className="btn btn-login">Login</button>
               <a href="#">Forgot password?</a>
-              <p>Don't have an account? <a href="#">Sign Up</a></p>
+              <p>Don't have an account?
+              <NavLink 
+            to="/account">Sign Up</NavLink></p>
             
           </form>
         </div>
