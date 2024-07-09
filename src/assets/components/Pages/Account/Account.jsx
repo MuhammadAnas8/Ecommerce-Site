@@ -44,7 +44,7 @@ function Account() {
               <label htmlFor="password">Password</label>
               <input value={input.password} onChange={valueChange} type="password" name="password" minLength={8} placeholder='enter password' required />
             </div>
-            <button className="btn">Sign Up</button>
+            <button className="btn">{login?"Login":"Sign Up"}</button>
             <p>{login?"Don't have an account?":"Already have an account?"} <a onClick={login?()=>setLogin(false):()=>setLogin(true)} > {login?"Sign Up":"Login"  }  </a></p>
           </form>
         </div>
