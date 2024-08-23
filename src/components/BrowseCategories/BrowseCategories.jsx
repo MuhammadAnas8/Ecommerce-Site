@@ -1,7 +1,7 @@
 import React from 'react'
 import './BrowseCategories.css'
 import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
-import WatchOutlinedIcon from '@mui/icons-material/WatchOutlined'; // Replace with correct import
+import WatchOutlinedIcon from '@mui/icons-material/WatchOutlined'; 
 import LaptopMacOutlinedIcon from '@mui/icons-material/LaptopMacOutlined';
 import PhoneIphoneOutlinedIcon from '@mui/icons-material/PhoneIphoneOutlined';
 import { Link } from 'react-router-dom';

@@ -1,10 +1,10 @@
 import React from "react";
-import Hero from "../Hero/Hero";
-import Header from "../Common/Header/Header";
-import ProductList from "../Common/ProductList/ProductList";
-import NewArrivals from "../NewArrivals/NewArrivals";
-import BrowseCategories from "../BrowseCategories/BrowseCategories";
-import AllProducts from "../Data/AllProducts";
+import AllProducts from "../../Data/AllProducts";
+import Hero from "../../Hero/Hero";
+import Header from "../../Common/Header/Header";
+import ProductList from "../../Common/ProductList/ProductList";
+import BrowseCategories from "../../BrowseCategories/BrowseCategories";
+import NewArrivals from "../../NewArrivals/NewArrivals";
 
 function Home() {
   const FlashSaleProducts = AllProducts.filter(

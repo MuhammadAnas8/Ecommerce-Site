@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import accountleft from '../../../images/account-left.png'
-// import accountleft from '../../../images/download.png'
 import './Account.css'
 import PageHeader from '../Common/PageHeader/PageHeader'
 import { Link } from 'react-router-dom'
