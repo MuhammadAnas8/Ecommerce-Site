@@ -1,18 +1,13 @@
 import React from 'react'
-import Header from '../../Common/Header/Header'
-import ProductList from '../../Common/ProductList/ProductList'
-import { LaptopsProducts, LaptopsProductsTrending } from '../../Data/LaptopsProducts'
-import PageHeader from '../Common/PageHeader/PageHeader'
+import AllProducts from '../../Data/AllProducts'
+import ProductCategory from '../../Common/ProductCategory/ProductCategory'
 
 function Laptops() {
+  const allLaptops = AllProducts.filter((product) => product.category === "laptop")
   return (
-    <div>
-      <PageHeader PageName={'Laptops'} />
-      <Header heading="LAPTOPS" subHeading="TRENDING NOW" />
-      <ProductList products={LaptopsProductsTrending} />
-      <Header heading="ALL PRODUCTS" subHeading="LAPTOPS" />
-      <ProductList products={LaptopsProducts} />
-    </div>
+<>
+<ProductCategory category="Laptops" products={allLaptops} />
+</>
   )
 }
 

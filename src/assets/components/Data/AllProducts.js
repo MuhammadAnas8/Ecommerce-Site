@@ -112,6 +112,7 @@ const AllProducts = [
     price: 2999.99,
     rating: 4,
     category: 'laptop'
+
 },
 {
     id: 14,
@@ -129,7 +130,6 @@ const AllProducts = [
     rating: 4,
     category: 'laptop',
     trending: true,
-    bestSelling: true,
     onSale: true
 },
 {
@@ -148,7 +148,8 @@ const AllProducts = [
     title: 'SpectraDrive Elite,i7 8th gen',
     price: 1369.99,
     rating: 4,
-    category: 'laptop'
+    category: 'laptop',
+    bestSelling: true
 },
 {
     id: 18,
@@ -156,7 +157,8 @@ const AllProducts = [
     title: 'PulseTech Fusion, i3 8th gen',
     price: 1459.99,
     rating: 3,
-    category: 'laptop'
+    category: 'laptop',
+    bestSelling: true
 },
 {
     id: 19,
@@ -173,7 +175,6 @@ const AllProducts = [
     price: 3449.99,
     rating: 4,
     category: 'laptop',
-    bestSelling: true
 },
 // Phones
 {
@@ -183,7 +184,6 @@ const AllProducts = [
     price: 799.99,
     rating: 5,
     category: 'phones',
-    newArrival: true,
   },
   {
     id: 22,
@@ -201,6 +201,7 @@ const AllProducts = [
     price: 999.99,
     rating: 4,
     category: 'phones',
+    newArrival: true,
     onSale: true
   },
   {
@@ -254,7 +255,9 @@ const AllProducts = [
     title: 'VertexPro 11',
     price: 999.99,
     rating: 5,
-    category: 'phones'
+    category: 'phones',
+    newArrival: true
+
   },
   {
     id: 30,
@@ -297,7 +300,8 @@ const AllProducts = [
     title: 'TEO ultra with free Case',
     price: 69.99,
     rating: 3,
-    category: 'watches'
+    category: 'watches',
+    bestSelling: true
   },
   {
     id: 35,
@@ -314,7 +318,6 @@ const AllProducts = [
     price: 1369.99,
     rating: 4,
     category: 'watches',
-    bestSelling: true
   },
   {
     id: 37,
