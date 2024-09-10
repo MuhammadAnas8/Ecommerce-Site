@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function PageHeader({PageName}) {
   return (
     <div className="page-header">
-        <strong>{<Link className='page-header-link' to="/home">{'Home '}</Link>} <i class="fas fa-angle-right"></i>{` ${PageName}`}</strong>
+        <strong>{<Link className='page-header-link' to="/home">{'Home '}</Link>} <i className="fas fa-angle-right"></i>{` ${PageName}`}</strong>
     </div>
   )
 }

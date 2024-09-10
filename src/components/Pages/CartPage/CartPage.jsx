@@ -3,11 +3,13 @@ import './CartPage.css'
 import { Link } from 'react-router-dom'
 import { CartProducts } from '../../Data/CartProducts'
 import CartItem from '../../Common/CartItem/CartItem';
+import { useCart } from '../../../context/CartContext';
 
 const shipping = 25.49;
 
 
 function CartPage() {
+  const { cart, cartItemCount } = useCart();
   const [total, setTotal] = useState(0);
 
   const handleTotalChange = (newTotal) => {
@@ -15,12 +17,12 @@ function CartPage() {
   };
   return (
     <div className='cart-page'>
-         <Link className='cart-link' to="/home"><i className="fas fa-angle-left"></i><strong>Continue Shopping</strong></Link>
+         <Link className='cart-link' to="/home"><i className="fas fa-angle-left"></i><strong>Continue Shopping</strong></Link><span>..{cartItemCount()}</span>
          <div className="cart-container">
           <div className="cart-items">
          <h3> Shopping Cart</h3>
          <div className="cart-items-list">
-         <CartItem CartProducts={CartProducts} onTotalChange={handleTotalChange} />
+         <CartItem CartProducts={cart} onTotalChange={handleTotalChange}  />
          </div>
           </div>
 

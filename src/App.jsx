@@ -10,6 +10,7 @@ import Laptops from './components/Pages/Laptops/Laptops'
 import  Headphones  from './components/Pages/Headphones/Headphones'
 import CartPage from './components/Pages/CartPage/CartPage'
 import Account from './components/Pages/Account/Account'
+import { CartProvider } from './context/CartContext'
 function App() {
   const location = useLocation();
   const showNavbar = location.pathname === '/cart' ||  location.pathname === '/account';
@@ -17,6 +18,7 @@ function App() {
     <>
 
       <div>
+        <CartProvider>
         {!showNavbar && <Navbar />}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,6 +31,7 @@ function App() {
           <Route path="/account" element={<Account />} />
         </Routes>
         <Footer />
+        </CartProvider>
       </div>
    
 
