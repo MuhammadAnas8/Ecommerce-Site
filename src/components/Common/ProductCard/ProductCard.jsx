@@ -3,26 +3,28 @@ import './ProductCard.css';
 import { useCart } from '../../../context/CartContext';
 
 function ProductCard({ id, image, title, price, rating}) {
+
   const { addToCart, increaseQuantity, decreaseQuantity,removeFromCart, cart } = useCart();
 
+  //check if current product is already in cart if yes set productQuantity to quantity added else 0
   const cartItem = cart.find(item => item.id === id);
   const productQuantity = cartItem ? cartItem.quantity : 0;
 
+  // This handle Add to cart button by calling addToCart method from cartContext
   const handleAddToCart = () => {
     addToCart({ id, image, title, price, rating });
   };
 
+  // This handle quantity increase button by calling increaseQuantity method from cartContext
   const handleIncrease = () => {
-    // setQuantity(prevQuantity => prevQuantity + 1);
     increaseQuantity(id);
   };
 
+  // This handle quantity decrease button by calling decreaseQuantity and removeFromCart method from cartContext
   const handleDecrease = () => {
     if (productQuantity > 1) {
-      // setQuantity(prevQuantity => prevQuantity - 1);
       decreaseQuantity(id);
     } else if (productQuantity === 1) {
-      // setQuantity(0);
       removeFromCart(id);
     }
   };

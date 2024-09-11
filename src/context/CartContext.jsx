@@ -18,15 +18,12 @@ export const CartProvider = ({ children }) => {
           return [...prevCart, { ...product, quantity: 1 }];
         });
       };
+
     // Function to remove a product from the cart
     const removeFromCart = (productId) => {
         setCart((prevCart) => prevCart.filter(product => product.id !== productId));
     };
   
-    const getQuantity = (productId) => {
-        const product = cart.find(product => product.id === productId);
-        return product ? product.quantity : 0;
-    }
     // Function to get the total number of items in the cart
     const cartItemCount = () => {
         return cart.reduce((count, item) => count + item.quantity, 0);
@@ -46,13 +43,12 @@ export const CartProvider = ({ children }) => {
         setCart((prevCart) => 
             prevCart.map((item) =>
                 item.id === id ? { ...item, quantity:item.quantity - 1 } : item
-                // item.id === id ? { ...item, quantity: Math.max(0, item.quantity - 1) } : item
             ).filter(item => item.quantity > 0) // Remove item if quantity becomes 0
         );
     };
 
     return (
-        <CartContext.Provider value={{ cart, increaseQuantity, decreaseQuantity, addToCart, removeFromCart, cartItemCount, setCart,getQuantity }}>
+        <CartContext.Provider value={{ cart, increaseQuantity, decreaseQuantity, addToCart, removeFromCart, cartItemCount, setCart }}>
             {children}
         </CartContext.Provider>
     );

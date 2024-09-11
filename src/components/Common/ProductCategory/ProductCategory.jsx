@@ -17,15 +17,7 @@ const ProductCategory = ({ category, products }) => {
             <Header heading={category.toUpperCase()} subHeading="NEW ARRIVALS" />
             <ProductList products={filteredProducts("newArrival")} />
           </>
-        )}
-  
-        {/* {filteredProducts("bestSelling").length > 0 && (
-          <>
-            <Header heading={category.toUpperCase()} subHeading="BEST SELLING" />
-            <ProductList products={filteredProducts("bestSelling")} />
-          </>
-        )} */}
-  
+        )}  
         {filteredProducts("trending").length > 0 && (
           <>
             <Header heading={category.toUpperCase()} subHeading="TRENDING NOW" />

@@ -11,6 +11,8 @@ function ProductList({products}) {
   return (
     <div>
         <div className="product-list">
+
+        {/* if showAll is true then show All products otherwise first 4 */}
         {products.slice(0, showAll ? products.length : 4).map(product => (
           <ProductCard 
             key={product.id}
